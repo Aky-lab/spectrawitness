@@ -223,6 +223,8 @@ examples/interlacing/README.md
 examples/matrix.json
 examples/partitions/README.md
 examples/producer/README.md
+examples/tutorial/README.md
+examples/tutorial/triangle.json
 lake-manifest.json
 lakefile.toml
 lean-toolchain

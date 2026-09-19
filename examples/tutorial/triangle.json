@@ -1,0 +1,7 @@
+{
+  "rows": [6, 4, 0],
+  "queries": [
+    {"kind": "count", "lower": -2, "upper": -1},
+    {"kind": "count", "lower": -1, "upper": 2}
+  ]
+}

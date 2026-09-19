@@ -24,7 +24,7 @@ local tool checks. The tools use the Python standard library.
 
 ## Current checked source snapshot
 
-The explicit source export contains 247 allowlisted files plus its generated
+The explicit source export contains 249 allowlisted files plus its generated
 SHA-256 manifest. The distributed Lean declarations and proofs match the
 checked source snapshot: the direct validator compiled all 164 modules to a
 fresh package-object directory using Lean 4.30.0 and the nine existing
@@ -53,6 +53,23 @@ The ordinary route used fresh dependency checkouts and downloaded precompiled
 dependency artifacts; it did not install a fresh toolchain or compile all
 dependencies from source. Hosted CI for this snapshot, performance, license
 compliance, and publication decisions remain outside this validation.
+
+## Public clone and tutorial check
+
+On 2026-09-19, a fresh clone of the public SpectraWitness repository at
+`fde02294625fe7273af0674dc3692b42754fb9ed` passed `lake exe cache get` and
+`lake build` on Windows with the installed Lean 4.30.0 toolchain. Dependency
+checkouts and the mathlib download-cache directory were fresh. Cache setup took
+289.64 seconds (8,459 artifacts); the build passed all 3,393 jobs in 497.48
+seconds. Existing style-linter warnings did not prevent compilation.
+
+The [triangle tutorial](examples/tutorial/README.md) was then exercised in that
+clone. Its generated named-graph report compiled successfully. Changing the
+first eigenvalue count from 2 to 3 produced the expected Lean `decide` failure:
+the count equality is false. This verifies both the successful example and a
+specific incorrect-answer rejection. The tutorial and documentation additions
+do not change the compiled library sources. This check uses an existing
+toolchain; it is not a fresh toolchain installation or hosted CI result.
 
 ## Trust boundary
 

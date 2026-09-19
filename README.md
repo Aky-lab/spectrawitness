@@ -9,9 +9,11 @@ certificate checkers, graph operations, and finite enumeration results.
 The repository is [Aky-lab/spectrawitness](https://github.com/Aky-lab/spectrawitness).
 The Lake package name remains `spectral_graph`; Lean imports retain the
 `SpectralGraph` namespace. Import `SpectralGraph` for the public library,
-or import a narrower module. The
-principal namespaces are `SpectralGraph`, `SpectralGraph.Inertia`,
+or import a narrower module. The principal namespaces are `SpectralGraph`, `SpectralGraph.Inertia`,
 `SpectralGraph.Certificate`, `SpectralGraph.Graph`, and `SpectralGraph.Search`.
+
+Start with the [triangle certificate tutorial](examples/tutorial/README.md):
+build the package, prove two eigenvalue counts, and see an incorrect claim rejected.
 
 ## Main interfaces
 
@@ -39,13 +41,13 @@ principal namespaces are `SpectralGraph`, `SpectralGraph.Inertia`,
 import SpectralGraph.Certificate.Basic
 open SpectralGraph SpectralGraph.Certificate
 
-def A : Matrix (Fin 2) (Fin 2) ℚ := !![0, 1; 1, 0]
+def A : Matrix (Fin 2) (Fin 2) â„š := !![0, 1; 1, 0]
 def cert : InertiaCertificate (Fin 2) where
   change := !![1, 1; 1, -1]
   inverse := !![1 / 2, 1 / 2; 1 / 2, -1 / 2]
-  target := ⟨1, 0, 1⟩
+  target := âŸ¨1, 0, 1âŸ©
 
-example : matrixInertia (ratCastMatrix A) = ⟨1, 0, 1⟩ :=
+example : matrixInertia (ratCastMatrix A) = âŸ¨1, 0, 1âŸ© :=
   cert.sound A (by decide +kernel)
 ```
 
