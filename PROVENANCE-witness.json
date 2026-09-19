@@ -1,0 +1,38 @@
+{
+  "source_project": "Minimum14",
+  "source_identity_note": "The recorded hashes identify the exact documentary source snapshots used for adaptation; they do not establish ownership or a distribution license.",
+  "sources": [
+    {
+      "path": "Minimum14/CertifiedSearch/C6SeparationSound.lean",
+      "sha256": "517a3e10597c97df353a6858c1aa86c43a98807cbcf515f99283786cc72b5702"
+    },
+    {
+      "path": "Minimum14/CertifiedSearch/C8Separation.lean",
+      "sha256": "7ddddb56255a202682c7d4093f245f05bf02f795135381b9aaf0c3717615e7c8"
+    },
+    {
+      "path": "Minimum14/CertifiedSearch/C8SeparationSound.lean",
+      "sha256": "b90ac2a5524a552da2db92c78b53b564012c59fd0596d16e2cf0a9b588d368cc"
+    }
+  ],
+  "extraction": "Generalizes source fixed-order C6/C8 negative-pair, negative/kernel and stalled-kernel witnesses. No graph-family census, support-at-most-three generator, fixed dimension or native computation proof was copied.",
+  "modules": [
+    "SpectralGraph/Certificate/Witness.lean",
+    "SpectralGraph/Certificate/WitnessInput.lean",
+    "SpectralGraph/Certificate/WitnessSubspace.lean",
+    "SpectralGraph/Certificate/WitnessSubspaceInput.lean",
+    "SpectralGraphTests/Witness.lean"
+  ],
+  "new_api": [
+    "Arbitrary finite index types and exact rational coefficients; real lower-bound and singularity semantics.",
+    "Strict dense length and sparse support validation; raw row-major integer matrix validation.",
+    "Arbitrary-k negative Gram certificates derive independence rather than assume it; dense/sparse column input with exact diagonal length."
+  ],
+  "validation": "The recorded validation used Lean 4.30.0 and the package's pinned dependency cache. Tests use decide +kernel; audited public soundness theorems use only propext, Classical.choice and Quot.sound.",
+  "limitations": [
+    "No external byte/text parser is provided.",
+    "Subspace certificates require an orthogonal negative basis supplied by the producer; no discovery algorithm is included.",
+    "Sparse witnesses are evaluated via dense exact coordinates, so runtime depends on ambient dimension as well as support.",
+    "Without ambient symmetry, negative-index claims concern quadratic-form inertia. Kernel and two-vector checkers enforce symmetry."
+  ]
+}

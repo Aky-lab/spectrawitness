@@ -1,0 +1,20 @@
+{
+  "artifact": "checked Dirichlet response and unbalanced weighted Wheatstone bridge",
+  "development": "independent SpectralGraph package",
+  "lean": "4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "classical_mathematics": "Schur elimination, harmonic extension, Dirichlet minimum energy and terminal current",
+  "reused_pinned_apis": ["Matrix.schur_complement_eq₁₁", "Matrix.PosDef.dotProduct_mulVec_pos", "Matrix.fromBlocks_mulVec", "SimpleGraph.lapMatrix"],
+  "local_reused_interfaces": ["SpectralGraph.Certificate.checkSchur", "SpectralGraph.Graph.laplacianUpdate", "SpectralGraph.matrix_posDef_of_matrixInertia_neg_zero_eq_zero"],
+  "locally_authored_consumer": "exact all-real terminal response and IsLeast 13/11 for the unbalanced weighted bridge",
+  "trust_boundary": "The rational blocks and strict checker are authored in Lean; kernel-checked rational and real equalities bind them to the named graph update. A separate strict interior inertia certificate and symmetry establish PosDef. The importing application reuses those exported facts without a second checker computation.",
+  "claims": {
+    "novelty": false,
+    "upstream_readiness": false,
+    "mathlib_acceptance": false,
+    "external_adoption": false,
+    "publication": false,
+    "full_spectrum": false,
+    "performance": false
+  }
+}

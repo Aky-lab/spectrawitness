@@ -1,0 +1,21 @@
+{
+  "source_project": "Minimum14",
+  "source_identity_note": "The recorded hashes identify the exact documentary source snapshots used for adaptation; they do not establish ownership or a distribution license.",
+  "sources": [
+    {
+      "path": "Minimum14/CertifiedSearch/GraphEncoding.lean",
+      "sha256": "5e959e5e8c254532e059cb9a77e5f6d1c171ce264d6841e08b3bd6dd9958e510",
+      "extracted_to": "SpectralGraph/Graph/Encoding.lean",
+      "adaptation": "Preserved generic total decoding, degree semantics, and executable one-vertex extension proof; replaced source imports and namespaces."
+    }
+  ],
+  "new_modules": {
+    "SpectralGraph/Graph/EncodingCheck.lean": "Strict dimension/bit-range/loop contracts, distinct symmetric-row validation with exact adjacency soundness, generic executable matrix bridge, raw symmetric matrix bridge, semantic equality criterion.",
+    "SpectralGraphTests/Encoding.lean": "Kernel-checked valid and malformed encodings, representation equivalence, matrix semantics, extension, and axiom audit."
+  },
+  "limitations": [
+    "The total decoder accepts malformed arrays by design; use the explicit validity check at external certificate boundaries.",
+    "Oriented row validity permits either or both edge orientations; unique canonical serialization is not claimed.",
+    "No byte-stream parser, text format, or graph6 codec is provided."
+  ]
+}

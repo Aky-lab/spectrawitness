@@ -1,0 +1,35 @@
+name: Lean and certificate checks
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4, resolved 2026-09-19
+      # Options follow https://github.com/leanprover/lean-action
+      - uses: leanprover/lean-action@50fcf42d2e460296f1a34b402e990d1b24f8b596 # v1, resolved 2026-09-19
+        with:
+          auto-config: false
+          build: true
+          use-mathlib-cache: true
+          use-github-cache: false
+      - name: Exact producer tests
+        run: python3 -m unittest discover -s tools -p 'test_*.py'
+      - name: Inspect public theorem axioms
+        run: |
+          mkdir -p .validation-ci
+          lake env lean Validation/Axioms.lean
+          lake env lean SpectralGraphTests/Trust.lean > .validation-ci/trust.log
+          python3 tools/audit.py --trust-log .validation-ci/trust.log
+      - name: Kernel-check external product certificate
+        run: |
+          python3 tools/certify_matrix.py examples/matrix.json .validation-ci/Generated.lean --format product
+          lake env lean .validation-ci/Generated.lean

@@ -1,0 +1,21 @@
+{
+  "artifact": "shifted-adjacency characterization of disjoint unions of cliques",
+  "documentary_source": {
+    "source_project": "Minimum14",
+    "path": "Minimum14/Paper/Section7CliqueUnion.lean",
+    "sha256": "f8fb0ee44592ad35058c4b7da63621185041a48a3957d1a60495f237594d94b5",
+    "selected_lines": "23-126",
+    "selected_declarations": [
+      "IsCliqueUnion",
+      "cliqueSetoid",
+      "cliqueIncidenceMatrix",
+      "one_add_adjMatrix_eq_cliqueGram",
+      "one_add_adjMatrix_posSemidef_iff_isCliqueUnion"
+    ]
+  },
+  "destination": "SpectralGraph/Graph/CliqueUnion.lean",
+  "adaptation": "Uses pinned mathlib's SimpleGraph.IsCompleteMultipartite predicate and its nonadjacency setoid on the complement, exports no duplicate clique-union predicate, narrows imports, and adds the existing SpectralGraph inertia-to-PSD bridge as a semantic corollary.",
+  "excluded_source_scope": "No rank, nullity, corank, path-family, two-core, canonicalization, kernel-cost, service, route, or census material was selected.",
+  "consumer": "SpectralGraphTests/Applications/CliqueUnionSix.lean consumes the separately checked K3 disjoint-union K2 disjoint-union K1 inertia fact.",
+  "rights_note": "The source hash establishes documentary identity only. It does not establish authorship, ownership, public distribution permission, or a license grant. See RIGHTS.md."
+}

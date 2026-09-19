@@ -1,0 +1,7 @@
+{
+  "rows": [78, 148, 288, 112, 160, 256, 384, 256, 0],
+  "queries": [
+    {"kind": "count", "lower": -4, "upper": -2},
+    {"kind": "count", "lower": -2, "upper": 0}
+  ]
+}

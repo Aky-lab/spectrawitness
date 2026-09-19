@@ -1,0 +1,44 @@
+[
+  {
+    "source": "Minimum14/CertifiedSearch/C8Separation.lean",
+    "sha256": "7ddddb56255a202682c7d4093f245f05bf02f795135381b9aaf0c3717615e7c8",
+    "selections": [
+      "allSublistsLen and equivalence theorem",
+      "headBucketAt and allSublistsLen_eq_true_of_headBuckets"
+    ],
+    "destination": "SpectralGraph/Search/SubsetCheck.lean",
+    "adaptation": "No dimension-specific assumptions; renamed namespace and head-edge documentation. Stream recursion changed to structural recursion on the input list, enabling direct kernel reduction with decide."
+  },
+  {
+    "new_declarations": [
+      "allSublistsLen_eq_true_iff",
+      "allSublistsLen_sound",
+      "allSublistsLen_eq_true_iff_headBuckets",
+      "allSublistsLen_finset_sound",
+      "mem_toFinset_sublistsLen_iff",
+      "nonemptySubsetsAtMost",
+      "allNonemptySubsetsAtMost"
+    ],
+    "origin": "New dimension-free semantic bridge, bounded-cardinality generation and streamed checking."
+  },
+  {
+    "new_module": "SpectralGraph/Search/Batches.lean",
+    "origin": "New strict interval-manifest validation with exact index coverage and multiplicity proof, streamed range checking, and independent head-bucket proof assembly. No external success flags trusted."
+  },
+  {
+    "new_module": "SpectralGraph/Graph/PackedEnumerationFast.lean",
+    "origin": "New capacity-pruned and size-pruned packed graph enumeration, exact output-member equivalence with reference enumeration, inherited completeness and validity, and streamed extension-check acceptance equivalence."
+  },
+  {
+    "tests": [
+      "SpectralGraphTests/SubsetCheck.lean",
+      "SpectralGraphTests/Batches.lean",
+      "SpectralGraphTests/PackedEnumerationFast.lean"
+    ],
+    "validation": "Direct Lean compilation and kernel decide. Batch regressions reject gaps, overlaps, omitted suffixes, overshoot, zero-length intervals and disorder."
+  },
+  {
+    "new_module": "SpectralGraph/Graph/EncodingInvariant.lean",
+    "origin": "New proofs that extension writes exact dimensions and bounded bits; strict validity iff old loop bits absent; validity preserved by extension and by both full generators. No new source proof extraction. Test module EncodingInvariant checks orientation flexibility, malformed loops, high bits and generic output sizes."
+  }
+]

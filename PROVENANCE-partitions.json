@@ -1,0 +1,26 @@
+{
+  "artifact": "graph cell compression and equitable spectrum interfaces",
+  "development": "independent SpectralGraph package",
+  "lean": "4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "reused_pinned_apis": [
+    "QuadraticForm signature pullback and finite-dimensional rank APIs",
+    "Module.End eigenvector and spectrum membership APIs",
+    "Matrix.IsHermitian spectrum_real_eq_range_eigenvalues",
+    "SimpleGraph.adjMatrix"
+  ],
+  "local_reused_interfaces": [
+    "SpectralGraph.Inertia.sigPos_comp_le",
+    "SpectralGraph.Inertia.sigPos_le_comp_add_codim",
+    "SpectralGraph.Inertia.lt_eigenvalues₀_iff",
+    "SpectralGraph.Inertia.eigenvalues₀_le_iff",
+    "SpectralGraph.Certificate.ProductInertiaCertificate.sound"
+  ],
+  "claims": {
+    "novelty": false,
+    "upstream_readiness": false,
+    "mathlib_acceptance": false,
+    "external_adoption": false
+  },
+  "notes": "The friendship graph is a bounded local consumer. Exact Lean proofs and checked rational certificate data establish the stated local results; they are not evidence of publication, novelty, scalability, or upstream acceptance."
+}

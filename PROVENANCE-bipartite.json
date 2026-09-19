@@ -1,0 +1,30 @@
+[
+  {
+    "source": "Minimum14/Paper/Section5UnmarkedPaths.lean",
+    "sha256": "aed8f8a051a2d7596527c89d3a6e1c4820daa0043503d69222f9c99e0c86e24e",
+    "destination": "SpectralGraph/Graph/Bipartite.lean",
+    "selection": "First four generic bipartite symmetry/signature theorems; excluded degree-two forest application and paper arithmetic."
+  },
+  {
+    "source": "Minimum14/Paper/Section8Biadjacency.lean",
+    "sha256": "295f7bf3e5561cd22959bb27221bfbf79bab44f8fdf7cbf7706a63839ed791bd",
+    "destination": "SpectralGraph/Graph/Biadjacency.lean",
+    "selection": "Biadjacency definition, common-neighbor Gram, off-diagonal block reindexing, unit Schur and generic principal-minor implications; excluded degree2/3 arithmetic corollaries."
+  },
+  {
+    "new_declarations": [
+      "adjMatrix_pos_eq_neg_of_isBipartite",
+      "SpectralGraph.Inertia.bipartiteBlock_pos_shift_inertia",
+      "shiftedAdjMatrix_submatrix_sumCompl_eq_fromBlocks",
+      "shiftedAdjMatrix_inertia_eq_biadjacencyGram",
+      "shiftedAdjMatrix_neg_eq_biadjacencyColGram_pos",
+      "biadjacencyRowGramAt_apply_self",
+      "biadjacencyRowGramAt_apply_of_ne",
+      "two_le_shiftedAdjMatrix_neg_of_commonNeighbor_minor"
+    ],
+    "origin": "New generalization from unit shift to every positive real shift, full inertia triple with rectangular dimension correction, squared Gram threshold, either-side negative-index transfer, and nonunit common-neighbor minor obstruction."
+  },
+  {
+    "architecture": "Generic bipartiteBlock_pos_shift_inertia is located in SpectralGraph/Inertia/BipartiteBlock.lean, depending only on ShiftedGramGeneral and its matrix imports. Graph/Biadjacency imports this matrix API; unit-shift compatibility interfaces document the preferred generalized counterparts."
+  }
+]

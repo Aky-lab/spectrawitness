@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-09",
+  "independent_extensions": {
+    "Inertia/Spectrum, OrderedSpectrum": "New proofs using pinned mathlib Hermitian spectral theorem and finite initial-segment counting.",
+    "Inertia/RankOneExact": "New exact update balance by eliminating a bordered matrix in both orders.",
+    "Certificate/ProductInertia": "New checked intermediate-product certificate and semantic reduction to congruence soundness.",
+    "Certificate/SpectralInterval, IntegerSpectralInterval": "New rational interval and ordered eigenvalue acceptance boundaries, denominator clearing and correctness.",
+    "Certificate/RankOneUpdate": "New checked inverse-solve composition with explicit previously proved base inertia.",
+    "Certificate/WitnessInput, WitnessSubspace, WitnessSubspaceInput": "New strict raw-data boundaries and arbitrary-dimensional negative Gram certification; witness motivation recorded separately.",
+    "Graph/NormalizedInertia": "New normalized checker with exact equivalence to original packed checker.",
+    "Search/Batches, Graph/PackedEnumerationFast, Graph/EncodingInvariant": "New strict batch coverage, pruned equivalent generation, and generated-encoding invariants.",
+    "tools/certify_matrix.py": "New untrusted exact Python producer with strict JSON and Lean emission; no source producer copied.",
+    "Inertia/NegativeSpectrum": "New final-segment eigenvalue counting and witness-subspace localization proofs, including strict upper endpoints.",
+    "Graph/IntegerSpectrum": "New graph-facing rational interval and eigenvalue bracket APIs, with canonical integer adjacency and symmetry handled internally.",
+    "tools/audit.py": "New local source/compiled-public-axiom guard and source-hash freshness checks; complements kernel checking.",
+    "Validation/Axioms": "New compile-time development audit using Lean.collectAxioms over every public namespace declaration; produces no mathematical theorem."
+  },
+  "semantic_layer_refactor": "Real diagonal inertia lives in Inertia/Diagonal; ExactInertia keeps one compatibility alias. Bipartite block inertia lives in Inertia/BipartiteBlock independently of graph imports.",
+  "record_policy": "Source hashes identify documentary snapshots, not ownership or permission to relicense. Adapted sources are copied into this package and have no runtime or build dependency on their documentary origins.",
+  "style_cleanup": "Removed inherited linter warnings in independent package proof bodies and omitted unused typeclasses; original source files untouched.",
+  "snapshot_note": "The recorded Minimum14/Inertia/Matrix.lean hash identifies the historical adaptation source. Later source versions are outside this record."
+}

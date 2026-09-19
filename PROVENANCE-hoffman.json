@@ -1,0 +1,28 @@
+{
+  "artifact": "certified regular-graph Hoffman bounds and 3x3 rook graph consumer",
+  "development": "independent SpectralGraph package",
+  "lean": "4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "classical_mathematics": "Hoffman ratio bound from a negative lower adjacency cutoff and constant degree",
+  "reused_pinned_apis": [
+    "SimpleGraph.IsRegularOfDegree",
+    "SimpleGraph.IsIndepSet",
+    "SimpleGraph.indepNum",
+    "SimpleGraph.adjMatrix",
+    "Matrix.PosSemidef"
+  ],
+  "local_reused_interfaces": [
+    "SpectralGraph.matrix_posSemidef_of_matrixInertia_neg_eq_zero",
+    "SpectralGraph.Graph.checkAdjacencyInertiaAt_sound",
+    "SpectralGraph.Graph.indepNum_le_adjacency_inertia"
+  ],
+  "claims": {
+    "novelty": false,
+    "upstream_readiness": false,
+    "mathlib_acceptance": false,
+    "external_adoption": false,
+    "publication": false,
+    "full_spectrum": false
+  },
+  "trust_boundary": "The strict JSON and Python report generator are untrusted discovery. Kernel-checked Lean validates packed rows, exact labelled graph equality, three endpoint inertias and two interval counts. The separate graph proof reuses those facts to conclude a universal bound and the exact independence number. No external adoption is claimed."
+}

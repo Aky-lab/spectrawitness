@@ -1,0 +1,36 @@
+{
+  "artifact": "threshold-count, principal-submatrix, induced-graph and rank-one interlacing interfaces",
+  "origin": "Package-local development from existing SpectralGraph inertia lemmas and pinned mathlib interfaces",
+  "pinned_mathlib": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "mathlib_interfaces_reused": [
+    "Matrix.IsHermitian.eigenvalues₀",
+    "Matrix.IsHermitian.submatrix",
+    "SimpleGraph.induce_adj",
+    "SimpleGraph.adjMatrix_apply",
+    "SimpleGraph.edge",
+    "SimpleGraph.edge_adj",
+    "SimpleGraph.sup_adj",
+    "SimpleGraph.degree_eq_sum_if_adj"
+  ],
+  "package_interfaces_reused": [
+    "matrixInertia_submatrix_pos_le",
+    "sigPos_le_comp_add_codim",
+    "rankOne_inertia_mono",
+    "lt_eigenvalues₀_iff",
+    "eigenvalues₀_le_iff"
+  ],
+  "new_scope": [
+    "threshold-count ordered spectrum comparison",
+    "arbitrary-codimension principal interlacing",
+    "induced adjacency specialization",
+    "ordered singular-safe rank-one interlacing",
+    "one-edge Laplacian conductance identity"
+  ],
+  "claims_not_made": [
+    "mathematical novelty",
+    "upstream acceptance",
+    "external adoption",
+    "publication or release readiness",
+    "new performance results"
+  ]
+}

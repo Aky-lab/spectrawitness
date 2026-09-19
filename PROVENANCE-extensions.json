@@ -1,0 +1,59 @@
+[
+  {
+    "source": "Minimum14/CertifiedSearch/GraphExtension.lean",
+    "sha256": "6510d8252f6e4c899656f9eb4a2355be37b665979c3d93e44b2032fd5da38729",
+    "destination": "SpectralGraph/Graph/Extension.lean",
+    "selection": "Whole module; namespaces/imports adapted; degree selection theorem generalized to arbitrary natural degree bound."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphExtensionDegree.lean",
+    "sha256": "b4fe06abf50e856ebc7e5afb8a7bea1375ec8c4a45eec58819edd0259e9fb0be",
+    "destination": "SpectralGraph/Graph/ExtensionDegree.lean",
+    "selection": "Whole module; namespaces/imports adapted; degree selection theorem generalized to arbitrary natural degree bound."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphExtensionCompleteness.lean",
+    "sha256": "7eee5e4c00ee85ce8d7a2cf0c51c1c0f4cbf62b270dbf6f22840838ecd72f751",
+    "destination": "SpectralGraph/Graph/ExtensionCompleteness.lean",
+    "selection": "Whole module; namespaces/imports adapted; degree selection theorem generalized to arbitrary natural degree bound."
+  },
+  {
+    "new_declarations": [
+      "hasDegreeAtMost_oneVertexExtension_iff",
+      "boundedDegreeSelections",
+      "mem_boundedDegreeSelections",
+      "connected_oneVertexExtension",
+      "boundedDegreeSelections_sound",
+      "connected_boundedDegree_iso_oneVertexExtension",
+      "boundedDegreeExtensionCandidates",
+      "boundedDegreeExtensionCandidates_complete",
+      "boundedDegreeExtensionCandidates_sound"
+    ],
+    "origin": "New generic library proofs, composed from extracted extension API and mathlib connectivity; adjacency decision procedure made constructive; kernel regression examples cover degree bounds 1, 2 and 3."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/SubcubicCompleteness.lean",
+    "sha256": "8d94e337ba2fbc075e71d0980d4d2bef2751884d719d7a684062ecf2d9b9f08a",
+    "destination": "SpectralGraph/Graph/PackedEnumeration.lean",
+    "selection": "Isomorphism coverage definition, extension coverage, deduplication and singleton base proof generalized to arbitrary degree bound; full recursive executable generator and its soundness/completeness are new."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/SubcubicData/CensusCompleteness.lean",
+    "sha256": "044783403d7def3b28dca97722fac19d10c44867e47556fa5a4395a2d901d793",
+    "destination": "SpectralGraph/Graph/PackedEnumeration.lean",
+    "selection": "Isomorphism coverage definition, extension coverage, deduplication and singleton base proof generalized to arbitrary degree bound; full recursive executable generator and its soundness/completeness are new."
+  },
+  {
+    "new_module": "SpectralGraph/Graph/PackedEnumeration.lean",
+    "new_api": [
+      "vertexSubsetList",
+      "packedDegreeSelectionList",
+      "packedDegreeExtensions",
+      "packedDegreeExtensionCandidates",
+      "packedConnectedDegreeGraphs",
+      "packedConnectedDegreeGraphs_complete",
+      "packedConnectedDegreeGraphs_sound"
+    ],
+    "limitations": "Reference generator enumerates all subsets and retains isomorphic duplicates; proof is independent of degree bound or order cutoff. No claim of production-scale performance."
+  }
+]

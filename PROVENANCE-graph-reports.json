@@ -1,0 +1,21 @@
+{
+  "artifact": "bounded exact graph spectral report producer and K3 consumer",
+  "development": "independent SpectralGraph package",
+  "lean": "4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "local_reused_interfaces": [
+    "SpectralGraph.Graph.graphOfPackedRows",
+    "SpectralGraph.Graph.packedRowsValid",
+    "SpectralGraph.Graph.checkAdjacencyInertiaAt_sound",
+    "SpectralGraph.Inertia.eigenvalues₀_mem_Ioc_iff",
+    "SpectralGraph.Inertia.eigenvalue_count_Ioc_eq"
+  ],
+  "claims": {
+    "novelty": false,
+    "upstream_readiness": false,
+    "mathlib_acceptance": false,
+    "external_adoption": false,
+    "large_order_performance": false
+  },
+  "trust_boundary": "Python parses and discovers untrusted exact data. Generated Lean checks storage, optional labelled graph equality, every endpoint inertia and each final spectral query. The raw JSON hash is metadata, not a parsing proof."
+}

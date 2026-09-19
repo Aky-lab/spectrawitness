@@ -1,0 +1,267 @@
+import SpectralGraph
+import SpectralGraphTests.Applications.PathEndpointSupporting
+import SpectralGraphTests.PrincipalSpectrum
+import SpectralGraphTests.Applications.InducedCliqueSpectrum
+import SpectralGraphTests.Applications.CycleLaplacianUpdate
+import SpectralGraphTests.Applications.FriendshipPartition
+import SpectralGraphTests.EquitableSpectrum
+import SpectralGraphTests.PartitionSpectrum
+import SpectralGraphTests.GraphReports
+import SpectralGraphTests.Applications.SignedC4Independence
+import SpectralGraphTests.Applications.PetersenIndependence
+import SpectralGraphTests.Independence
+import SpectralGraphTests.Hoffman
+import SpectralGraphTests.Cut
+import SpectralGraphTests.Applications.PrismBisection
+import SpectralGraphTests.SpectralCut
+import SpectralGraphTests.Applications.WheatstoneDirichlet
+import SpectralGraphTests.SchurDirichlet
+import SpectralGraphTests.RegularSupportBound
+import SpectralGraphTests.ZeroPrincipal
+import SpectralGraphTests.CliqueUnion
+
+/-! Inspect transitive axioms of the principal researcher-facing boundaries. -/
+
+#print axioms SpectralGraph.Certificate.InertiaCertificate.sound
+#print axioms SpectralGraph.Certificate.matrixInertia_eq_fastComputedInertia
+#print axioms SpectralGraph.Graph.inertia_at_threshold
+#print axioms SpectralGraph.Graph.lineGraph_inertia_relations
+#print axioms SpectralGraph.Certificate.matrixInertia_eq_discoverIntegerInertiaV2
+#print axioms SpectralGraph.Certificate.DenseIntMatrix.checkInertia_sound
+#print axioms SpectralGraph.Search.Cover.verify
+#print axioms SpectralGraph.Graph.verifyInertia
+#print axioms SpectralGraph.Graph.checkPackedInertia_sound
+#print axioms SpectralGraph.Certificate.checkInverseBilinear_real_sound
+#print axioms SpectralGraph.Certificate.checkSchur_inertia
+#print axioms SpectralGraph.Graph.boundedDegreeExtensionCandidates_complete
+#print axioms SpectralGraph.Graph.packedConnectedDegreeGraphs_complete
+#print axioms SpectralGraph.Graph.packedConnectedDegreeGraphs_sound
+#print axioms SpectralGraph.Graph.CoversConnectedDegree.verifyInertia
+
+#print axioms SpectralGraph.Inertia.matrixInertia_eq_eigenvalue_counts
+#print axioms SpectralGraph.Inertia.lt_eigenvalues₀_iff
+#print axioms SpectralGraph.Inertia.gramAt_pos_eq
+#print axioms SpectralGraph.Inertia.rankOne_inertia_balance
+#print axioms SpectralGraph.Inertia.bipartiteBlock_pos_shift_inertia
+#print axioms SpectralGraph.Certificate.ProductInertiaCertificate.sound
+#print axioms SpectralGraph.Certificate.DenseIntMatrix.checkNormalizedInertia_sound
+#print axioms SpectralGraph.Certificate.DenseIntMatrix.checkEigenvalueBracket_sound
+#print axioms SpectralGraph.Certificate.checkRankOneUpdate_sound
+#print axioms SpectralGraph.Certificate.checkNegativeSubspace_sound
+#print axioms SpectralGraph.Certificate.checkNegativeSubspaceWithImage_sound
+#print axioms SpectralGraph.Search.checkBatches_verify
+#print axioms SpectralGraph.Graph.packedConnectedDegreeGraphsFast_complete
+#print axioms SpectralGraph.Graph.packedConnectedDegreeGraphsFast_valid
+#print axioms SpectralGraph.Graph.checkPackedNormalizedInertia_sound
+#print axioms SpectralGraph.Graph.shiftedAdjMatrix_inertia_eq_biadjacencyGram
+
+#print axioms SpectralGraph.Inertia.eigenvalues₀_lt_iff
+#print axioms SpectralGraph.Graph.checkAdjacencyEigenvalueBracket_sound
+
+/-! Shifted adjacency and clique-union structural boundary. -/
+#print axioms SpectralGraph.Graph.one_add_adjMatrix_posSemidef_iff_compl_isCompleteMultipartite
+#print axioms SpectralGraph.Graph.compl_isCompleteMultipartite_of_one_add_adjMatrix_inertia_neg_eq_zero
+#print axioms SpectralGraphTests.CliqueUnionCertificate.shifted_inertia
+#print axioms SpectralGraphTests.Applications.CliqueUnionSix.complement_isCompleteMultipartite
+#print axioms SpectralGraphTests.CliqueUnion.pathThree_witness_value
+#print axioms SpectralGraphTests.CliqueUnion.malformed_zero_negative_claim_rejected
+
+/-! Ordered interlacing and graph-update boundaries. -/
+#print axioms SpectralGraph.Inertia.eigenvalues₀_le_of_pos_le_add
+#print axioms SpectralGraph.Inertia.principalSubmatrix_eigenvalues₀_interlace
+#print axioms SpectralGraph.Inertia.eigenvalues₀_rankOne_mono
+#print axioms SpectralGraph.Inertia.eigenvalues₀_rankOne_succ_le
+#print axioms SpectralGraph.Graph.induced_adjMatrix_eq_submatrix
+#print axioms SpectralGraph.Graph.induced_adjacency_eigenvalue_interlaces_default
+#print axioms SpectralGraph.Graph.inducedAdjacencySpectrumInterlaces
+#print axioms SpectralGraph.Graph.laplacianUpdate_one_eq_sup_edge
+#print axioms SpectralGraph.Graph.laplacianUpdate_eigenvalues₀_mono
+#print axioms SpectralGraphTests.PrincipalSpectrum.noncontiguous_cauchy_and_repeated_equality
+#print axioms SpectralGraphTests.Applications.InducedCliqueSpectrum.K4_delete_two_interlaces
+#print axioms SpectralGraphTests.Applications.InducedCliqueSpectrum.K4_delete_two_second_eigenvalue_eq_neg_one
+#print axioms SpectralGraphTests.Applications.CycleLaplacianUpdate.weightOne_eq_inserted_diagonal
+
+/-! Graph-cell compression and equitable lifting boundaries. -/
+#print axioms SpectralGraph.Inertia.compression_pos_bounds
+#print axioms SpectralGraph.Graph.cellIndicator_gram
+#print axioms SpectralGraph.Graph.partition_pos_bounds
+#print axioms SpectralGraph.Graph.lt_adjacency_eigenvalue_of_lt_cellPencil_pos
+#print axioms SpectralGraph.Graph.adjacency_eigenvalue_le_of_cellPencil_pos_add_le
+#print axioms SpectralGraph.Inertia.lift_invariant_eigenpair
+#print axioms SpectralGraph.Inertia.eigenvalues₀_eq_of_invariant_eigenpair
+#print axioms SpectralGraph.Graph.IsEquitable.adjMatrix_mul_cellIndicator
+#print axioms SpectralGraph.Graph.eigenvalues₀_eq_of_equitable_eigenpair
+#print axioms SpectralGraphTests.Applications.FriendshipPartition.lambdaPlus_occurs
+#print axioms SpectralGraphTests.Applications.FriendshipPartition.lambdaMinus_occurs
+#print axioms SpectralGraphTests.Applications.FriendshipPartition.five_halves_lt_top_eigenvalue
+
+/-! Application endpoints: the universal n=8 law and representative
+    independently checked supporting/witness consequences. -/
+
+#print axioms SpectralGraphTests.Applications.PathEndpoint8.shifted_inertia
+#print axioms SpectralGraphTests.Applications.PathEndpoint8.second_smallest_eq
+#print axioms SpectralGraphTests.Applications.PathEndpointSupporting.L6_second_smallest_transition_eq
+#print axioms SpectralGraphTests.Applications.PathEndpointSupporting.L12_second_smallest_transition_eq
+#print axioms SpectralGraphTests.Applications.PathEndpointSupporting.L8_second_smallest_half_lt_from_partial
+
+/-! Generated graph-report storage, exact binding, endpoint facts and final queries. -/
+#print axioms SpectralGraphTests.GraphReports.K3Report.rows_valid
+#print axioms SpectralGraphTests.GraphReports.K3Report.graph_matches
+#print axioms SpectralGraphTests.GraphReports.K3Report.inertia_0
+#print axioms SpectralGraphTests.GraphReports.K3Report.inertia_1
+#print axioms SpectralGraphTests.GraphReports.K3Report.inertia_2
+#print axioms SpectralGraphTests.GraphReports.K3Report.query_0
+#print axioms SpectralGraphTests.GraphReports.K3Report.query_1
+#print axioms SpectralGraphTests.GraphReports.K3Report.query_2
+#print axioms SpectralGraphTests.GraphReports.K3Report.query_3
+#print axioms SpectralGraphTests.GraphReports.K3Report.query_4
+#print axioms SpectralGraphTests.GraphReports.completeThree_repeated_second
+#print axioms SpectralGraphTests.GraphReports.completeThree_negative_multiplicity
+
+/-! Zero-block, independence, and exact named certificate consumers. -/
+#print axioms SpectralGraph.Inertia.card_le_matrixInertia_zero_add_min_of_submatrix_eq_zero
+#print axioms SpectralGraph.Graph.indepSet_card_le_inertia_of_supported
+#print axioms SpectralGraph.Graph.indepNum_le_inertia_of_supported
+#print axioms SpectralGraph.Graph.indepSet_card_le_adjacency_inertia
+#print axioms SpectralGraph.Graph.indepNum_le_adjacency_inertia
+#print axioms SpectralGraphTests.Independence.Definitions.signedC4_isSymm
+#print axioms SpectralGraphTests.Independence.Definitions.signedC4_supported
+#print axioms SpectralGraphTests.Independence.Definitions.signedC4_real_supported
+#print axioms SpectralGraphTests.Independence.SignedC4Certificate.inertia
+#print axioms SpectralGraphTests.Independence.PetersenReport.graph_matches
+#print axioms SpectralGraphTests.Independence.PetersenReport.inertia_0
+#print axioms SpectralGraphTests.Independence.PetersenReport.query_0
+#print axioms SpectralGraphTests.Applications.SignedC4Independence.indepSet_card_le_two
+#print axioms SpectralGraphTests.Applications.SignedC4Independence.indepNum_eq_two
+#print axioms SpectralGraphTests.Applications.SignedC4Independence.ordinary_adjacency_inertia
+#print axioms SpectralGraphTests.Applications.SignedC4Independence.ordinary_bound_eq_three
+#print axioms SpectralGraphTests.Applications.PetersenIndependence.indepSet_card_le_four
+#print axioms SpectralGraphTests.Applications.PetersenIndependence.indepNum_eq_four
+#print axioms SpectralGraphTests.Independence.edgelessFin3_indepNum
+#print axioms SpectralGraphTests.Independence.triangle_inertia
+#print axioms SpectralGraphTests.Independence.neg_triangle_inertia
+
+/-! Certified Hoffman bounds, exact named rook report, and boundaries. -/
+#print axioms SpectralGraph.Inertia.card_mul_sub_le_of_zero_principal_of_posSemidef
+#print axioms SpectralGraph.Graph.indepSet_card_le_hoffman_of_inertia
+#print axioms SpectralGraph.Graph.indepNum_le_hoffman_of_inertia
+#print axioms SpectralGraphTests.Hoffman.Definitions.rook3_regular
+#print axioms SpectralGraphTests.Hoffman.Definitions.diagonal_independent
+#print axioms SpectralGraphTests.Hoffman.RookReport.rows_valid
+#print axioms SpectralGraphTests.Hoffman.RookReport.graph_matches
+#print axioms SpectralGraphTests.Hoffman.RookReport.inertia_0
+#print axioms SpectralGraphTests.Hoffman.RookReport.inertia_1
+#print axioms SpectralGraphTests.Hoffman.RookReport.inertia_2
+#print axioms SpectralGraphTests.Hoffman.RookReport.query_0
+#print axioms SpectralGraphTests.Hoffman.RookReport.query_1
+#print axioms SpectralGraphTests.Applications.RookHoffman.indepSet_card_le_three
+#print axioms SpectralGraphTests.Applications.RookHoffman.indepNum_eq_three
+#print axioms SpectralGraphTests.Applications.RookHoffman.ordinary_adjacency_inertia
+#print axioms SpectralGraphTests.Applications.RookHoffman.ordinary_inertia_bound_eq_four
+#print axioms SpectralGraphTests.Applications.RookHoffman.looser_ratio_eq_nine_halves
+#print axioms SpectralGraphTests.Applications.RookHoffman.looser_shift_posDef
+#print axioms SpectralGraphTests.Applications.RookHoffman.indepNum_le_four_at_neg_four
+#print axioms SpectralGraphTests.RegularSupportBound.empty_ambient_core
+#print axioms SpectralGraphTests.RegularSupportBound.noncontiguous_zero_block_core
+#print axioms SpectralGraphTests.RegularSupportBound.identity_shift_psd
+#print axioms SpectralGraphTests.RegularSupportBound.identity_row_sum
+#print axioms SpectralGraphTests.RegularSupportBound.identity_bad_zero_premise
+#print axioms SpectralGraphTests.RegularSupportBound.identity_false_omitting_diagonal
+#print axioms SpectralGraphTests.Hoffman.singleton_zero_cutoff_no_neg
+#print axioms SpectralGraphTests.Hoffman.singleton_zero_cutoff_fails_on_actual_indepNum
+#print axioms SpectralGraphTests.Hoffman.rook_singular_nullity_four
+#print axioms SpectralGraphTests.Hoffman.rook_singular_neg_zero
+#print axioms SpectralGraphTests.Hoffman.rook_neg_one_inertia
+#print axioms SpectralGraphTests.Hoffman.rook_neg_one_not_lower_cutoff
+#print axioms SpectralGraphTests.Hoffman.rook_neg_one_false_ratio
+#print axioms SpectralGraphTests.Hoffman.empty_indepSet_interface
+#print axioms SpectralGraphTests.Hoffman.empty_indepNum_interface
+#print axioms SpectralGraphTests.Hoffman.singleton_indepSet_interface
+#print axioms SpectralGraphTests.Hoffman.singleton_indepNum_exact
+#print axioms SpectralGraphTests.Hoffman.bool_indepNum_interface
+#print axioms SpectralGraphTests.Hoffman.star_leaves_independent
+#print axioms SpectralGraphTests.Hoffman.star_not_regular_two
+#print axioms SpectralGraphTests.Hoffman.star_shift_inertia
+#print axioms SpectralGraphTests.Hoffman.star_shift_posDef
+#print axioms SpectralGraphTests.Hoffman.star_false_guessed_degree_ratio
+
+/-! Certified Laplacian cuts and exact triangular-prism bisection. -/
+#print axioms SpectralGraph.Inertia.centeredShift_isSymm
+#print axioms SpectralGraph.Inertia.variance_le_of_centeredShift_posSemidef
+#print axioms SpectralGraph.Graph.lapMatrix_indicator_eq_card_interedges
+#print axioms SpectralGraph.Graph.gap_mul_card_mul_compl_le_card_mul_cut_of_inertia
+#print axioms SpectralGraphTests.Cuts.prism_regular
+#print axioms SpectralGraphTests.Cuts.face_card
+#print axioms SpectralGraphTests.Cuts.face_cut_card
+#print axioms SpectralGraphTests.Cuts.prismInput_rat_two
+#print axioms SpectralGraphTests.Cuts.prismInput_rat_three
+#print axioms SpectralGraphTests.Cuts.prismInput_real_two
+#print axioms SpectralGraphTests.Cuts.prismInput_real_three
+#print axioms SpectralGraphTests.Cuts.prismInput_two_checked
+#print axioms SpectralGraphTests.Cuts.prism_centered_two_inertia
+#print axioms SpectralGraphTests.Cuts.prism_centered_three_inertia
+#print axioms SpectralGraphTests.Cuts.prism_balanced_cut_lower
+#print axioms SpectralGraphTests.Cuts.prism_bisection_isLeast
+#print axioms SpectralGraphTests.Cuts.face_compl_balanced_cut_card
+#print axioms SpectralGraphTests.Cut.bool_one_edge_directed_crossings
+#print axioms SpectralGraphTests.Cut.bool_one_edge_indicator_energy
+#print axioms SpectralGraphTests.Cut.path3_noncontiguous_indicator_energy
+#print axioms SpectralGraphTests.SpectralCut.empty_negative_matrix_variance
+#print axioms SpectralGraphTests.SpectralCut.empty_graph_cut_bound
+#print axioms SpectralGraphTests.SpectralCut.singleton_full_negative_cut_bound
+#print axioms SpectralGraphTests.SpectralCut.path_degrees_unequal
+#print axioms SpectralGraphTests.SpectralCut.pathInput_rat
+#print axioms SpectralGraphTests.SpectralCut.pathInput_real
+#print axioms SpectralGraphTests.SpectralCut.path_neg_zero
+#print axioms SpectralGraphTests.SpectralCut.path_nontrivial_cut_bound
+#print axioms SpectralGraphTests.SpectralCut.prism_two_singular
+#print axioms SpectralGraphTests.SpectralCut.prism_three_negative
+#print axioms SpectralGraphTests.SpectralCut.prism_three_false_face_bound
+#print axioms SpectralGraphTests.SpectralCut.twoTriangles_lap_psd
+#print axioms SpectralGraphTests.SpectralCut.twoTriangles_face_cut_zero
+#print axioms SpectralGraphTests.SpectralCut.twoTriangles_false_if_ordinary_psd_only
+
+/-! Checked Dirichlet elimination and named unbalanced bridge. -/
+#print axioms SpectralGraph.Certificate.checkSchur_harmonic_response
+#print axioms SpectralGraph.Certificate.checkSchur_energy_min
+#print axioms SpectralGraph.Certificate.checkSchur_energy_eq_iff
+#print axioms SpectralGraphTests.Dirichlet.schur_checked
+#print axioms SpectralGraphTests.Dirichlet.bridge_degrees
+#print axioms SpectralGraphTests.Dirichlet.rational_block_binding
+#print axioms SpectralGraphTests.Dirichlet.rational_update_cast_binding
+#print axioms SpectralGraphTests.Dirichlet.real_block_binding
+#print axioms SpectralGraphTests.Dirichlet.pivot_checked
+#print axioms SpectralGraphTests.Dirichlet.pivot_inertia
+#print axioms SpectralGraphTests.Dirichlet.pivot_isSymm
+#print axioms SpectralGraphTests.Dirichlet.pivot_posDef
+#print axioms SpectralGraphTests.Dirichlet.energy_formula
+#print axioms SpectralGraphTests.Dirichlet.constant_kernel
+#print axioms SpectralGraphTests.Dirichlet.weightedBridge_nonzero_constant
+#print axioms SpectralGraphTests.Dirichlet.bridge_energy_lower
+#print axioms SpectralGraphTests.Dirichlet.bridge_energy_eq_iff
+#print axioms SpectralGraphTests.Dirichlet.bridge_harmonic_attains
+#print axioms SpectralGraphTests.Dirichlet.bridge_harmonic_current
+#print axioms SpectralGraphTests.Dirichlet.unit_harmonic
+#print axioms SpectralGraphTests.Dirichlet.unit_energy_eq_iff
+#print axioms SpectralGraphTests.Dirichlet.unit_harmonic_current
+#print axioms SpectralGraphTests.Dirichlet.unit_energy_isLeast
+#print axioms SpectralGraphTests.Dirichlet.equal_terminal_energy
+#print axioms SpectralGraphTests.Dirichlet.equal_terminal_current
+#print axioms SpectralGraphTests.Dirichlet.equal_terminal_constant
+#print axioms SpectralGraphTests.SchurDirichlet.EmptyInterior.unique
+#print axioms SpectralGraphTests.SchurDirichlet.EmptyTerminal.unique_zero
+#print axioms SpectralGraphTests.SchurDirichlet.Rectangular.response
+#print axioms SpectralGraphTests.SchurDirichlet.Rectangular.energy
+#print axioms SpectralGraphTests.SchurDirichlet.Rectangular.equality
+#print axioms SpectralGraphTests.SchurDirichlet.ZeroCoupling.unique_zero
+#print axioms SpectralGraphTests.SchurDirichlet.NegativePivot.response
+#print axioms SpectralGraphTests.SchurDirichlet.NegativePivot.below_false_minimum
+#print axioms SpectralGraphTests.SchurDirichlet.SingularPivot.rejected
+#print axioms SpectralGraphTests.SchurDirichlet.BothEmpty.response
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.wrong_Q_rejected
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.wrong_X_rejected
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.wrong_S_rejected
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.unit_interior_edge_current_nonzero
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.bridge_full_singular
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.equal_boundary_zero
+#print axioms SpectralGraphTests.SchurDirichlet.Boundaries.negative_terminal_value

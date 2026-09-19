@@ -1,0 +1,9 @@
+{
+  "rows": [2, 4, 8, 16, 0],
+  "queries": [
+    {"kind": "bracket", "lower": "1732/1000", "upper": "1733/1000", "index": 0},
+    {"kind": "bracket", "lower": 0, "upper": 1, "index": 1},
+    {"kind": "count", "lower": 0, "upper": 1},
+    {"kind": "count", "lower": "0/1", "upper": 2}
+  ]
+}

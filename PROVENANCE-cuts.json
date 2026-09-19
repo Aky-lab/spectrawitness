@@ -1,0 +1,27 @@
+{
+  "artifact": "certified Laplacian cut bound and triangular-prism bisection",
+  "development": "independent SpectralGraph package",
+  "lean": "4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "classical_mathematics": "division-free variance inequality and Laplacian indicator cut bound",
+  "reused_pinned_apis": [
+    "SimpleGraph.lapMatrix",
+    "SimpleGraph.interedges",
+    "SimpleGraph.lapMatrix_toLinearMap₂'",
+    "Matrix.PosSemidef"
+  ],
+  "local_reused_interfaces": [
+    "SpectralGraph.matrix_posSemidef_of_matrixInertia_neg_eq_zero",
+    "SpectralGraph.Certificate.DenseIntMatrix.checkInertia_sound"
+  ],
+  "locally_authored_consumer": "triangular-prism IsLeast bisection at three crossing edges",
+  "claims": {
+    "novelty": false,
+    "upstream_readiness": false,
+    "mathlib_acceptance": false,
+    "external_adoption": false,
+    "publication": false,
+    "full_spectrum": false
+  },
+  "trust_boundary": "The integer matrix is authored in Lean; strict checkInertia validates storage, symmetry and exact inertia. Kernel-checked rational and real equalities bind it to the named graph. The importing proof uses the semantic negative-index fact and universal cut theorem, with no enumeration."
+}

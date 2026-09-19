@@ -1,0 +1,65 @@
+{
+  "cases": {
+    "n12_double": {
+      "bytes": 8617,
+      "sha256": "57f5ab9839ef2c094306baa3fa4c1192f2cf9eda15e197b3e7acc5cb1191800a"
+    },
+    "n12_half": {
+      "bytes": 8625,
+      "sha256": "138fb2a2af84e8c2a1e56434416ae754d7da0f9fb3fcb35d65a12c0e177cd651"
+    },
+    "n12_half_witness": {
+      "bytes": 9913,
+      "sha256": "90a83ec7b3a6351acdedb969cd809929a6a84d17fd9828547083b28a72f55938"
+    },
+    "n12_star": {
+      "bytes": 8621,
+      "sha256": "7fb0b9f153989797f1baed44870386267f391b751ad72b42588d70a0acbac7d0"
+    },
+    "n12_zero": {
+      "bytes": 8550,
+      "sha256": "7020c51b68ef633ab1ea52b0f9cf19670f62dc9e9a707ead0194d7f155c65267"
+    },
+    "n6_double": {
+      "bytes": 2178,
+      "sha256": "e01ce65030d72d74d7c7c0dbceec07e1b12f54ae0d051b9755de9e601db922dd"
+    },
+    "n6_half": {
+      "bytes": 2184,
+      "sha256": "7ff6230fcf78bf3224f675fe8f3e7557e1b403191d6c8f2bbb55dfe080e874ec"
+    },
+    "n6_half_witness": {
+      "bytes": 2942,
+      "sha256": "8d01c066a468f78e186587ff76cdb19612b666c24eef34fb9b96663c1157455a"
+    },
+    "n6_star": {
+      "bytes": 2182,
+      "sha256": "aacb3dffd155c11d80f843c2d4552e98aa5691dcda0535aa0c6fa14638b3246d"
+    },
+    "n6_zero": {
+      "bytes": 2141,
+      "sha256": "8c6bf6f470e8bb1871456f5d6047d48871bd705c510a78507aa824dffd21cff7"
+    },
+    "n8_double": {
+      "bytes": 3383,
+      "sha256": "23cdeecce130681879fec1bdc22519b1c0a23e1f7f2142c08f8d3576dd810f07"
+    },
+    "n8_half": {
+      "bytes": 3391,
+      "sha256": "13573f34849779ec9e4be1c95883931d15d1981998acb738ec3df5afc2fe4240"
+    },
+    "n8_half_witness": {
+      "bytes": 4319,
+      "sha256": "8358a70071fa3cf31e9efe255f7a668f46df19967704dbd29caaba5d27b6c768"
+    },
+    "n8_star": {
+      "bytes": 3387,
+      "sha256": "460fdf0b23b0e80723846409f03bc070e795f7f1a025c68f936c8bc8c60e04e3"
+    },
+    "n8_zero": {
+      "bytes": 3346,
+      "sha256": "b19ca9da0b06658c6d3690e2ec077bc56e3a9d08c69543a58a2f0d1ffbf1ed96"
+    }
+  },
+  "schema": "weighted-path-application-v1"
+}

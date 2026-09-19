@@ -1,0 +1,233 @@
+[
+  {
+    "source": "Minimum14\\Inertia\\Basic.lean",
+    "sha256": "4aef2047f7f81d37bc3382be9f80e897cdb2a5287e233eccd43daabb40e51096",
+    "destination": "SpectralGraph/Inertia/Basic.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\BlockDiagonal.lean",
+    "sha256": "519dd0990d00664c569e8338e6d01aa5759b84e3a2ba47bb876a624d675ee48d",
+    "destination": "SpectralGraph/Inertia/BlockDiagonal.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\Congruence.lean",
+    "sha256": "22fc263b2bec84521c83e84e1e3ff990e74cd7737c9c3673078a938cb068769b",
+    "destination": "SpectralGraph/Inertia/Congruence.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\Matrix.lean",
+    "sha256": "d1da0f26e0240cfc286be9711927bec1d96ffc3aa379409944b6561a64798a94",
+    "destination": "SpectralGraph/Inertia/Matrix.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\NegativeWitness.lean",
+    "sha256": "ba17e2a23b169c2520b055d16d94e3858ddb9b1ce0e25d8ef5b82100fb351abe",
+    "destination": "SpectralGraph/Inertia/NegativeWitness.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\PosSemidefinite.lean",
+    "sha256": "d9abd90d5fb20ad2aeb274b77e3ad3ef76f277d90c8be8140cc01f5ce8fe4ef4",
+    "destination": "SpectralGraph/Inertia/PosSemidefinite.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\RankOne.lean",
+    "sha256": "7fa75916130cb706285b8f7c998f9bffc8485a9750debfb16d9f42d01f0a1998",
+    "destination": "SpectralGraph/Inertia/RankOne.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\Restriction.lean",
+    "sha256": "ebe195d79a9c1e84d44d88f7441bb082b331d357c3c9a5358f653e9a2b42fe56",
+    "destination": "SpectralGraph/Inertia/Restriction.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\SchurComplement.lean",
+    "sha256": "42a3025f8ee0c4399185b557e3cbad1a88a8e08752fe0419b85bf8389f5ffaa0",
+    "destination": "SpectralGraph/Inertia/SchurComplement.lean"
+  },
+  {
+    "source": "Minimum14\\Inertia\\ShiftedGram.lean",
+    "sha256": "496d46caa479314be870014a4ab3d0d36e2435849633689c7e90d1f341bb49d4",
+    "destination": "SpectralGraph/Inertia/ShiftedGram.lean"
+  },
+  {
+    "source": "Minimum14\\GraphMatrix.lean",
+    "sha256": "909dd0a22d26b4d992f899b0ffca62d2044c8bff50f97374738dffccfe42d40e",
+    "destination": "SpectralGraph/GraphMatrix.lean"
+  },
+  {
+    "source": "Minimum14\\CertifiedSearch\\ExactInertia.lean",
+    "sha256": "91a1cc10cb860bcc0b49b0a2bad7749f2eb677ab9f05c3018cc65cfd464a38b9",
+    "destination": "SpectralGraph/Certificate/ExactInertia.lean"
+  },
+  {
+    "source": "Minimum14\\CertifiedSearch\\ExactDiagonalization.lean",
+    "sha256": "026e6eb80d746af4b1af266859cdae067f327f275e54ce486f21772aedacb4ba",
+    "destination": "SpectralGraph/Certificate/ExactDiagonalization.lean"
+  },
+  {
+    "source": "Minimum14\\CertifiedSearch\\FastInertia.lean",
+    "sha256": "51a42588212af46d32a9f40f3a493302d8a4d38791d01e88e66291b270ed3599",
+    "destination": "SpectralGraph/Certificate/FastInertia.lean"
+  },
+  {
+    "source": "Minimum14\\CertifiedSearch\\SchurInertia.lean",
+    "sha256": "0c064c889249927c80f209c1edbd39c6b10f51e917d231171b5e3800dbc6b263",
+    "destination": "SpectralGraph/Certificate/SchurInertia.lean"
+  },
+  {
+    "source": "Minimum14/Paper/Section2.lean",
+    "sha256": "db436c41bd2759f8280e33d16e471b728d14fbb83e88a5099c3854898786b0eb",
+    "destination": "SpectralGraph/Graph/LineGraph.lean",
+    "selection": "graphSignature and six Gram/line-graph transfer theorems; manuscript arithmetic excluded"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/Basic.lean",
+    "sha256": "adb3184416419c396a2e9ca9d51feb3c26a070efb60e416a4e0acdb358a1c954",
+    "destination": "SpectralGraph/Search/Exhaustive.lean",
+    "selection": "Full module with namespace and import adaptation"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/CertifiedDedup.lean",
+    "sha256": "d4223bd9e83fd34729ef0b6f113c51c1a6548a61344f0607f95aeaa00a82b061",
+    "destination": "SpectralGraph/Search/Dedup.lean",
+    "selection": "Full module with namespace and import adaptation"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/ListSlices.lean",
+    "sha256": "018e36ff7d8dbbddc22d79c0ae5f7e1a4a812b7935ce90345565273ed62d5155",
+    "destination": "SpectralGraph/Search/Slices.lean",
+    "selection": "Full module with namespace and import adaptation"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphIsoCertificate.lean",
+    "sha256": "fc8b5b40d59f1fbcd0600ae50190a88e55b726f08b626b7a8feb2e1965a7f0d5",
+    "destination": "SpectralGraph/Graph/IsomorphismCertificate.lean",
+    "selection": "Full module with namespace and import adaptation"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/IntegerInertiaDiscovery.lean",
+    "sha256": "0cb53fc8f6c9a2865e45d8149c3121a36dddec115a964060c4394e2e4c300f22",
+    "destination": "SpectralGraph/Certificate/Integer.lean",
+    "selection": "Only dense storage and proved V2 fraction-free implementation; legacy producer, gcd reduction, and packed graph specialization excluded"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/IntegerInertiaSound.lean",
+    "sha256": "3d372199b8e7633d026b0c1d330753f12e4bd3bf9b4fc61e2bf2c75e20f2ba89",
+    "destination": "SpectralGraph/Certificate/IntegerSound.lean",
+    "selection": "Full module with namespace and import adaptation"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphExtension.lean",
+    "sha256": "6510d8252f6e4c899656f9eb4a2355be37b665979c3d93e44b2032fd5da38729",
+    "destination": "SpectralGraph/Graph/Extension.lean",
+    "selection": "Whole module; namespaces/imports adapted; degree selection theorem generalized to arbitrary natural degree bound."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphExtensionDegree.lean",
+    "sha256": "b4fe06abf50e856ebc7e5afb8a7bea1375ec8c4a45eec58819edd0259e9fb0be",
+    "destination": "SpectralGraph/Graph/ExtensionDegree.lean",
+    "selection": "Whole module; namespaces/imports adapted; degree selection theorem generalized to arbitrary natural degree bound."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphExtensionCompleteness.lean",
+    "sha256": "7eee5e4c00ee85ce8d7a2cf0c51c1c0f4cbf62b270dbf6f22840838ecd72f751",
+    "destination": "SpectralGraph/Graph/ExtensionCompleteness.lean",
+    "selection": "Whole module; namespaces/imports adapted; degree selection theorem generalized to arbitrary natural degree bound."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/SubcubicCompleteness.lean",
+    "sha256": "8d94e337ba2fbc075e71d0980d4d2bef2751884d719d7a684062ecf2d9b9f08a",
+    "destination": "SpectralGraph/Graph/PackedEnumeration.lean",
+    "selection": "Isomorphism coverage definition, extension coverage, deduplication and singleton base proof generalized to arbitrary degree bound; full recursive executable generator and its soundness/completeness are new."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/SubcubicData/CensusCompleteness.lean",
+    "sha256": "044783403d7def3b28dca97722fac19d10c44867e47556fa5a4395a2d901d793",
+    "destination": "SpectralGraph/Graph/PackedEnumeration.lean",
+    "selection": "Isomorphism coverage definition, extension coverage, deduplication and singleton base proof generalized to arbitrary degree bound; full recursive executable generator and its soundness/completeness are new."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/GraphEncoding.lean",
+    "sha256": "5e959e5e8c254532e059cb9a77e5f6d1c171ce264d6841e08b3bd6dd9958e510",
+    "destination": "SpectralGraph/Graph/Encoding.lean",
+    "selection": "Preserved generic total decoding, degree semantics, and executable one-vertex extension proof; replaced source imports and namespaces."
+  },
+  {
+    "source": "Minimum14/Paper/Section8Alpha.lean",
+    "sha256": "fbe793b8922495ff0ef249094449c2ba8c984edb1eb746244c4bd05323161bf0",
+    "destination": "SpectralGraph/Certificate/LinearSolve.lean",
+    "selection": "All-ones inverse solution certificate and rational inverse cast bridge generalized to arbitrary fields/vectors, multiple right-hand sides and certified Schur inertia; fixed Ferrers tables and manuscript row-sum constants excluded"
+  },
+  {
+    "source": "Minimum14/Paper/Section8Alpha.lean",
+    "sha256": "fbe793b8922495ff0ef249094449c2ba8c984edb1eb746244c4bd05323161bf0",
+    "destination": "SpectralGraph/Certificate/LinearSolveReal.lean",
+    "selection": "All-ones inverse solution certificate and rational inverse cast bridge generalized to arbitrary fields/vectors, multiple right-hand sides and certified Schur inertia; fixed Ferrers tables and manuscript row-sum constants excluded"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/C8Separation.lean",
+    "sha256": "7ddddb56255a202682c7d4093f245f05bf02f795135381b9aaf0c3717615e7c8",
+    "destination": "SpectralGraph/Search/SubsetCheck.lean",
+    "selection": "No dimension-specific assumptions; renamed namespace and head-edge documentation. Stream recursion changed to structural recursion on the input list, enabling direct kernel reduction with decide."
+  },
+  {
+    "source": "Minimum14/Paper/Section5UnmarkedPaths.lean",
+    "sha256": "aed8f8a051a2d7596527c89d3a6e1c4820daa0043503d69222f9c99e0c86e24e",
+    "destination": "SpectralGraph/Graph/Bipartite.lean",
+    "selection": "First four generic bipartite symmetry/signature theorems; excluded degree-two forest application and paper arithmetic."
+  },
+  {
+    "source": "Minimum14/Paper/Section8Biadjacency.lean",
+    "sha256": "295f7bf3e5561cd22959bb27221bfbf79bab44f8fdf7cbf7706a63839ed791bd",
+    "destination": "SpectralGraph/Graph/Biadjacency.lean",
+    "selection": "Biadjacency definition, common-neighbor Gram, off-diagonal block reindexing, unit Schur and generic principal-minor implications; excluded degree2/3 arithmetic corollaries."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/C6SeparationSound.lean",
+    "sha256": "517a3e10597c97df353a6858c1aa86c43a98807cbcf515f99283786cc72b5702",
+    "destination": "SpectralGraph/Certificate/Witness.lean",
+    "selection": "Generalizes source fixed-order C6/C8 negative-pair, negative/kernel and stalled-kernel witnesses. No graph-family census, support-at-most-three generator, fixed dimension or native computation proof was copied."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/C8Separation.lean",
+    "sha256": "7ddddb56255a202682c7d4093f245f05bf02f795135381b9aaf0c3717615e7c8",
+    "destination": "SpectralGraph/Certificate/Witness.lean",
+    "selection": "Generalizes source fixed-order C6/C8 negative-pair, negative/kernel and stalled-kernel witnesses. No graph-family census, support-at-most-three generator, fixed dimension or native computation proof was copied."
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/C8SeparationSound.lean",
+    "sha256": "b90ac2a5524a552da2db92c78b53b564012c59fd0596d16e2cf0a9b588d368cc",
+    "destination": "SpectralGraph/Certificate/Witness.lean",
+    "selection": "Generalizes source fixed-order C6/C8 negative-pair, negative/kernel and stalled-kernel witnesses. No graph-family census, support-at-most-three generator, fixed dimension or native computation proof was copied."
+  },
+  {
+    "source": "Minimum14/Inertia/ShiftedGram.lean",
+    "sha256": "496d46caa479314be870014a4ab3d0d36e2435849633689c7e90d1f341bb49d4",
+    "destination": "SpectralGraph/Inertia/ShiftedGramGeneral.lean",
+    "selection": "Generalized positive real shift and full rectangular dimension correction, reusing the independent Schur API"
+  },
+  {
+    "source": "Minimum14/Inertia/RankOne.lean",
+    "sha256": "7fa75916130cb706285b8f7c998f9bffc8485a9750debfb16d9f42d01f0a1998",
+    "destination": "SpectralGraph/Inertia/RankOneGeneral.lean",
+    "selection": "Coordinate update bounds generalized through arbitrary functional kernels and arbitrary vectors"
+  },
+  {
+    "source": "Minimum14/Inertia/Restriction.lean",
+    "sha256": "ebe195d79a9c1e84d44d88f7441bb082b331d357c3c9a5358f653e9a2b42fe56",
+    "destination": "SpectralGraph/Inertia/RankOneGeneral.lean",
+    "selection": "Restriction/codimension lemmas support the new arbitrary-vector proof"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/ExactInertia.lean",
+    "sha256": "91a1cc10cb860bcc0b49b0a2bad7749f2eb677ab9f05c3018cc65cfd464a38b9",
+    "destination": "SpectralGraph/Inertia/Diagonal.lean",
+    "selection": "Real diagonal inertia proof moved out of certificate layer into the semantic matrix layer"
+  },
+  {
+    "source": "Minimum14/CertifiedSearch/IntegerInertiaSound.lean",
+    "sha256": "3d372199b8e7633d026b0c1d330753f12e4bd3bf9b4fc61e2bf2c75e20f2ba89",
+    "destination": "SpectralGraph/Certificate/NormalizedInteger.lean",
+    "selection": "Independent integer induction adapted to checked positive-factor reduction; normalization and its proofs are new"
+  }
+]

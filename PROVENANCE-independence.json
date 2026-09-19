@@ -1,0 +1,27 @@
+{
+  "artifact": "zero-principal-block and graph independence inertia bounds with signed C4 and Petersen consumers",
+  "development": "independent SpectralGraph package",
+  "lean": "4.30.0",
+  "mathlib_revision": "c5ea00351c28e24afc9f0f84379aa41082b1188f",
+  "reused_pinned_apis": [
+    "SimpleGraph.IsIndepSet",
+    "SimpleGraph.indepNum",
+    "SimpleGraph.cycleGraph",
+    "SimpleGraph.adjMatrix"
+  ],
+  "local_reused_interfaces": [
+    "SpectralGraph.Inertia.matrixInertia_submatrix_neg_add_zero_le",
+    "SpectralGraph.Inertia.matrixInertia_neg",
+    "SpectralGraph.matrixInertia_diagonal",
+    "SpectralGraph.Certificate.ProductInertiaCertificate.sound",
+    "SpectralGraph.Graph.checkAdjacencyInertiaAt_sound"
+  ],
+  "claims": {
+    "novelty": false,
+    "upstream_readiness": false,
+    "mathlib_acceptance": false,
+    "external_adoption": false,
+    "exhaustive_extremal_classification": false
+  },
+  "trust_boundary": "Exact JSON and Python discovery are untrusted; generated Lean checks the named matrix and labelled graph bindings, inertia certificates, and the Petersen endpoint query. The graph support proofs and universal independence conclusions are separate kernel-checked Lean modules. Raw input digests are provenance only."
+}
